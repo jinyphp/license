@@ -1,0 +1,42 @@
+{
+    "name": "jiny/license",
+    "description": "jinyERP license",
+    "keywords": [
+        "jinyERP",
+        "framwork",
+        "license"
+    ],
+    "homepage": "http://www.jinyerp.com",
+    "type": "library",
+    "authors": [
+        {
+            "name": "hojinlee",
+            "email": "infohojin@gmail.com",
+            "homepage": "http://www.jinyerp.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jiny\\License\\":"dst/"
+        },
+        "files" : [
+            "dst/Helpers/Helper.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jiny\\License\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jiny\\License\\JinyLicenseServiceProvider"
+            ]
+        }
+    }
+}
