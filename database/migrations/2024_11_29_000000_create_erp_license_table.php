@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,9 +12,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('erp_license', function (Blueprint $table) {
+        Schema::create('license', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            
             $table->string('title')->nullable();
             $table->string('expire')->nullable();
         });
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('erp_license');
+        Schema::dropIfExists('license');
     }
 };

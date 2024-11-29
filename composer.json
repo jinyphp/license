@@ -17,14 +17,14 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php": "^8.1"
+        "php": "^8.2"
     },
     "autoload": {
         "psr-4": {
-            "Jiny\\License\\":"dst/"
+            "Jiny\\License\\":"/"
         },
         "files" : [
-            "dst/Helpers/Helper.php"
+            "Helpers/Helper.php"
         ]
     },
     "autoload-dev": {
