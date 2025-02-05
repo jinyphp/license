@@ -23,7 +23,16 @@ class JinyLicenseServiceProvider extends ServiceProvider
     {
         /* 라이브와이어 컴포넌트 등록 */
         $this->app->afterResolving(BladeCompiler::class, function () {
-            //Livewire::component('LiveTreeJson', \Jiny\Admin\Http\Livewire\LiveTreeJson::class);
+            Livewire::component('jiny-license-upload', \Jiny\License\Http\Livewire\LicenseUpload::class);
+            Livewire::component('jiny-license-table-popup-form', \Jiny\License\Http\Livewire\LicenseTablePopupForm::class);
+
+            Livewire::component('jiny-license-mail',
+                \Jiny\License\Http\Livewire\LicenseMail::class);
+
+            Livewire::component('jiny-license-store',
+                \Jiny\License\Http\Livewire\LicenseStore::class);
+
+            
         });
     }
 
